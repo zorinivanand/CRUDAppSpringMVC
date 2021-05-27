@@ -35,4 +35,20 @@ public class PController {
         personDAO.save(person1);
         return "redirect:/people";
     }
+
+    @GetMapping("/{id}/edit")
+    public String edit(Model model, @PathVariable("id") int id) {
+        model.addAttribute("person",personDAO.show(id));
+        return "people/edit";
+    }
+    @PatchMapping("/{id}")
+    public String update(@ModelAttribute("person")Person1 person1, @PathVariable("id") int id){
+        personDAO.update(id,person1);
+        return "redirect:/people";
+    }
+    @DeleteMapping("/{id}")
+    public String delete(@PathVariable("id") int id){
+        personDAO.delete(id);
+        return "redirect:/people";
+    }
 }
