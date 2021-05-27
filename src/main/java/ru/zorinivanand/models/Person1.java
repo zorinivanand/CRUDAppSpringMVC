@@ -10,6 +10,9 @@ public class Person1 {
         this.name=name;
     }
 
+    public Person1() {
+    }
+
     public int getId() {
         return id;
     }
@@ -25,5 +28,7 @@ public class Person1 {
     public void setId(int id) {
         this.id = id;
     }
+
+
 }
 
