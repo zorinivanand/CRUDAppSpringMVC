@@ -1,9 +1,17 @@
 package ru.zorinivanand.models;
 
+import javax.validation.constraints.*;
+
 public class Person1 {
     private int id;
+    @NotEmpty(message = "should not be empty")
+    @Size(min = 2,max = 30,message = "between 2 to 30 char")
     private String name;
+    @Min(value = 0,message = "not 0")
+    @Max(value = 99,message ="very big")
     private int age;
+    @NotEmpty(message = "should not be empty")
+    @Email(message = "not valid")
     private String email;
 
 
