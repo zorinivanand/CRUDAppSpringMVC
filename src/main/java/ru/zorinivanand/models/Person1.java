@@ -11,7 +11,7 @@ public class Person1 {
     @Max(value = 99,message ="very big")
     private int age;
     @NotEmpty(message = "should not be empty")
-    @Email(message = "not valid")
+//    @Email(message = "not valid")
     private String email;
 
 
